@@ -1,0 +1,138 @@
+{
+  "Stage 1: Idea Generation & Validation": {
+    "Goal": "Identify a problem worth solving and validate your solution.",
+    "Key Actions": [
+      "Brainstorm ideas based on market needs, passions, and expertise",
+      "Validate the idea with potential customers (surveys, interviews)",
+      "Analyze competitors and market trends",
+      "Build a Minimum Viable Product (MVP)"
+    ],
+    "Recommended Courses": [
+      "Entrepreneurship in Emerging Economies (HarvardX on edX)",
+      "Business Model Canvas: A Tool for Entrepreneurs (Coursera)",
+      "Market Research and Consumer Behavior (Coursera)"
+    ]
+  },
+  
+  "Stage 2: Building Your Team": {
+    "Goal": "Assemble a complementary team to bring your vision to life.",
+    "Key Actions": [
+      "Identify skill gaps (technical, marketing, sales, finance)",
+      "Recruit co-founders and key team members",
+      "Establish roles and responsibilities",
+      "Build a culture of trust and accountability"
+    ],
+    "Recommended Courses": [
+      "Building High-Performing Teams (Coursera)",
+      "Leadership and Team Development (LinkedIn Learning)",
+      "Foundations of Leadership (Harvard Business School Online)"
+    ]
+  },
+  
+  "Stage 3: Business Planning & Strategy": {
+    "Goal": "Create a robust business model and strategy.",
+    "Key Actions": [
+      "Write a Business Plan (including financial forecasts)",
+      "Define a clear Value Proposition",
+      "Create an actionable Go-To-Market (GTM) strategy",
+      "Identify revenue streams and cost structure"
+    ],
+    "Recommended Courses": [
+      "How to Write a Business Plan (Udemy)",
+      "Strategic Management and Innovation (Coursera)",
+      "Financial Management for Entrepreneurs (edX)"
+    ]
+  },
+  
+  "Stage 4: Product Development": {
+    "Goal": "Develop and refine your product/service.",
+    "Key Actions": [
+      "Build a prototype or beta version",
+      "Collect feedback and improve iteratively",
+      "Ensure product-market fit",
+      "Develop a roadmap for scalability"
+    ],
+    "Recommended Courses": [
+      "Product Management 101 (Udemy)",
+      "Agile Development & Scrum Master Training (LinkedIn Learning)",
+      "Product Design: The Process of Creating and Refining (Coursera)"
+    ]
+  },
+  
+  "Stage 5: Marketing & Sales": {
+    "Goal": "Attract customers and drive sales growth.",
+    "Key Actions": [
+      "Create a Digital Marketing Strategy",
+      "Build a strong online presence (social media, website, SEO)",
+      "Develop a sales funnel",
+      "Track and analyze marketing performance"
+    ],
+    "Recommended Courses": [
+      "Digital Marketing Specialization (Coursera)",
+      "Sales Training: Techniques for a Human-Centric Approach (Udemy)",
+      "SEO and Social Media Marketing (LinkedIn Learning)"
+    ]
+  },
+  
+  "Stage 6: Fundraising & Financial Management": {
+    "Goal": "Secure funding and manage finances responsibly.",
+    "Key Actions": [
+      "Bootstrap, seek angel investors, or approach venture capitalists",
+      "Pitch your startup to investors",
+      "Track cash flow and financial health",
+      "Understand equity, shares, and fundraising rounds"
+    ],
+    "Recommended Courses": [
+      "Startup Valuation Methods (Coursera)",
+      "Raising Capital: Pitching to Investors (Udemy)",
+      "Financial Modeling for Startups (edX)"
+    ]
+  },
+  
+  "Stage 7: Scaling the Business": {
+    "Goal": "Grow your company sustainably.",
+    "Key Actions": [
+      "Optimize operations for efficiency",
+      "Expand into new markets or product lines",
+      "Hire additional staff and build organizational structure",
+      "Maintain company culture during growth"
+    ],
+    "Recommended Courses": [
+      "Scaling Operations: Linking Strategy and Execution (Coursera)",
+      "Operational Excellence for Scaling Startups (edX)",
+      "Business Growth Strategies (LinkedIn Learning)"
+    ]
+  },
+  
+  "Stage 8: Sustainability & Exit Strategy": {
+    "Goal": "Ensure long-term success or plan for an exit.",
+    "Key Actions": [
+      "Diversify revenue streams",
+      "Improve customer retention and loyalty",
+      "Consider exit options (IPO, acquisition, or merger)",
+      "Build a legacy or transition leadership"
+    ],
+    "Recommended Courses": [
+      "Sustainable Business Strategy (Harvard Business School Online)",
+      "Exit Strategies for Entrepreneurs (Udemy)",
+      "Corporate Governance and Business Ethics (Coursera)"
+    ]
+  },
+  
+  "Additional Resources": {
+    "Books": [
+      "The Lean Startup by Eric Ries",
+      "Zero to One by Peter Thiel"
+    ],
+    "Communities": [
+      "Y Combinator Startup School",
+      "LinkedIn Groups",
+      "Local Startup Hubs"
+    ],
+    "Tools": [
+      "Trello (Project Management)",
+      "QuickBooks (Accounting)",
+      "HubSpot (CRM)"
+    ]
+  }
+}

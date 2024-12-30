@@ -1,0 +1,115 @@
+[
+    {
+       "trackName":"",
+       "trackDescription":"",
+       "roadMap":[
+        {
+            "roadName":"Idea Generation & Validation",
+            "roadGoal":"Goal: Identify a problem worth solving and validate your solution.",
+            "keyActions":[
+                "Brainstorm ideas based on market needs, passions, and expertise.",
+                "Validate the idea with potential customers (surveys, interviews).",
+                "Analyze competitors and market trends.",
+                "Build a Minimum Viable Product (MVP)."
+            ],
+            "recommendedCourses":[
+                "Entrepreneurship in Emerging Economies (HarvardX on edX)",
+                "Business Model Canvas: A Tool for Entrepreneurs (Coursera)",
+                "Market Research and Consumer Behavior (Coursera)"
+            ]
+        },
+        {
+            "roadName":"Building Your Team",
+            "roadGoal":"Assemble a complementary team to bring your vision to life.",
+            "keyActions":[
+                "Identify skill gaps (technical, marketing, sales, finance)",
+                "Recruit co-founders and key team members",
+                "Establish roles and responsibilities",
+                "Build a culture of trust and accountability"
+            ],
+            "recommendedCourses":[
+                "Building High-Performing Teams (Coursera)",
+                "Leadership and Team Development (LinkedIn Learning)",
+                "Foundations of Leadership (Harvard Business School Online)"
+            ]
+        },
+        {
+            "roadName":"Business Planning & Strategy",
+            "roadGoal":"Create a robust business model and strategy.",
+            "keyActions":[
+                "Write a Business Plan (including financial forecasts)",
+                "Define a clear Value Proposition",
+                "Create an actionable Go-To-Market (GTM) strategy",
+                "Identify revenue streams and cost structure"
+            ],
+            "recommendedCourses":[
+                "How to Write a Business Plan (Udemy)",
+                "Strategic Management and Innovation (Coursera)",
+                "Financial Management for Entrepreneurs (edX)"
+            ]                  
+        },
+        {
+            "roadName":" Product Development",
+            "roadGoal":"Develop and refine your product/service.",
+            "keyActions":[
+                "Build a prototype or beta version",
+                "Collect feedback and improve iteratively",
+                "Ensure product-market fit",
+                "Develop a roadmap for scalability"
+            ],
+            "recommendedCourses":[
+                "Product Management 101 (Udemy)",
+                "Agile Development & Scrum Master Training (LinkedIn Learning)",
+                "Product Design: The Process of Creating and Refining (Coursera)"
+            ]
+        },
+        {
+            "roadName":"Marketing & Sales",
+            "roadGoal":"Attract customers and drive sales growth.",
+            "keyActions":[
+                "Create a Digital Marketing Strategy",
+                "Build a strong online presence (social media, website, SEO)",
+                "Develop a sales funnel",
+                "Track and analyze marketing performance",
+                "Develop a marketing strategy (including social media)",
+                "Create a sales process and pipeline",
+                "Establish a customer acquisition plan",
+                "Measure and optimize marketing ROI"
+            ],
+            "recommendedCourses":[
+                "Digital Marketing (HubSpot Academy)",
+                "Sales Strategy and Tactics (Coursera)",
+                "Sales Training: Techniques for a Human-Centric Approach (Udemy)",
+                "SEO and Social Media Marketing (LinkedIn Learning)",
+                "Marketing Analytics (edX)"
+            ]
+        },
+        {
+            "roadName":"Operations & Management",
+            "roadGoal":"Establish a solid foundation for your business.",
+            "keyActions":[
+                "Set up a business entity (e.g., sole proprietorship, LLC)",
+                "Obtain necessary licenses and permits",
+                "Establish a financial system (e.g., accounting, invoicing)",
+                "Develop a human resources plan",
+                "Create a supply chain and logistics plan",
+                "Establish a customer service plan",
+                "Develop a business continuity plan",
+                "Establish a data management plan",
+                "Develop a risk management plan"
+            ],
+            "recommendedCourses":[
+                "Business Operations (Coursera)",
+                "Business Management (edX)",
+                "Human Resources Management (Udemy)",
+                "Supply Chain Management (LinkedIn Learning)",
+                "Customer Service: The Art of Delivering Exceptional Customer Experiences (Udemy)",
+                "Business Continuity Planning (Coursera)",
+                "Data Management (edX)",
+                "Risk Management (Coursera)"
+            ]
+
+        }
+       ] 
+    }
+]
