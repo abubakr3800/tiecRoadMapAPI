@@ -1,116 +1,174 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Frontend Roadmap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <style>
-    
-  </style>
-</head>
-<body>
-  <div class="container my-5">
-    <div class="row roadmap">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Roadmap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container my-5">
       <form id="roadMap">
-        <div class="fullRoad" id="full-road">
-        <div class="node-element" data-node-name="" data-node-number="" data-node-nested-from="" >
-         <div class="input-group my-3" >
-          <input type="text" class="form-control" placeholder="Main node name" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-danger" type="button" onclick=""><i class="fa-solid fa-trash"></i></button>
-          <div class="input-group-text">
-                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+        <div id="fullRoad">
+          <div class="node-element">
+            <div class="input-group my-3">
+              <input
+                type="text"
+                class="form-control node-name"
+                placeholder="Main node name"
+              />
+              <button class="btn btn-outline-danger remove-node" type="button">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Options
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item attach-link" href="#"
+                    >Attach to link</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item add-nested-node" href="#"
+                    >Add nested node</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="#" onclick="attachLink()" >attach to link</a></li>
-           <li><a class="dropdown-item" href="#" >add nested node</a></li>
-          </ul>
-         </div>
-          <button type="button" class="btn btn-primary btn-block btn-lg w-100" onclick="addNode()">+ Add node</button>
         </div>
-        </div>
-        <button type="submit" class="btn btn-success btn-block w-100 my-5 " id="createRoadMap">create roadmap</button>
-     </form>
+        <button
+          type="button"
+          class="btn btn-primary w-100 my-3"
+          id="addNodeButton"
+        >
+          + Add Node
+        </button>
+        <button type="submit" class="btn btn-success w-100">
+          Create Roadmap
+        </button>
+      </form>
+
+      <!-- Placeholder for displaying the roadmap -->
+      <div id="displayRoadmap" class="mt-5"></div>
     </div>
- </div>
-  
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
- <script>
-  var roadMapForm    = document.getElementById("roadMap"),
-      roadMapCreator = document.getElementById("createRoadMap"),
-      fullRoad       = document.getElementById("full-road");
-  
-  // Define a class
-  class roadMapNode {
-    constructor(name, url, nested) {
-        this.nodeName   = name;
-        this.nodeUrl    = url;
-        this.nodeNested = nested; // this is object inside the object which is nested object 
-    }
 
-    // Method to convert object to JSON
-    toJSON() {
-        return {
-            nodeName: this.nodeName,
-            nodeUrl: this.nodeUrl,
-            nestedNode: this.nodeNested
-        };
-    }
+    <script>
+      const roadmapData = []; // Array to store the roadmap data
 
-    // Static method to create object from JSON
-    static fromJSON(jsonString) {
-        const data = JSON.parse(jsonString);
-        return new roadMapNode(data.nodeName, data.nodeUrl, data.nodeNested);
-    }
-  }
+      document.getElementById('addNodeButton').addEventListener('click', addNode);
 
-  // Create an object
-  const roadMapNode = new roadMapNode('Alice', 20, 'A');
+      document.getElementById('roadMap').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form submission
 
-  // Serialize the object to JSON
-  const roadMapNodeJSON = JSON.stringify(roadMapNode.toJSON());
-  console.log('Serialized JSON:', roadMapNodeJSON);
+        // Collect data from the form
+        roadmapData.length = 0; // Clear the array
+        document.querySelectorAll('.node-element').forEach((node) => {
+          const nodeName = node.querySelector('.node-name').value;
+          const isChecked = node.querySelector('.form-check-input').checked;
+          roadmapData.push({ name: nodeName, checked: isChecked });
+        });
 
-  // Deserialize JSON back to object
-  const newRoadMapNode = roadMapNode.fromJSON(roadMapNodeJSON);
-  console.log('Deserialized Object:', newRoadMapNode);
-  console.log('Student Name:', newRoadMapNode.name);
+        // Display the roadmap
+        displayRoadmap();
+      });
 
-  
-  function createNodeFunc(e){
-    e.preventDefault;
-    
-  }
-  
-  function addNode(){
-    fullRoad.innerHTML += `<div class="node-element" data-node-name="" data-node-number="" data-node-nested-from="" >
-         <div class="input-group my-3" >
-          <input type="text" class="form-control" placeholder="Main node name" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-danger" type="button" onclick=""><i class="fa-solid fa-trash"></i></button>
-          <div class="input-group-text">
-                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-          </div>
-          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="#" >attach to link</a></li>
-           <li><a class="dropdown-item" href="#" >add nested node</a></li>
-          </ul>
-         </div>
-          <button type="button" class="btn btn-primary btn-block btn-lg w-100" onclick="addNode()">+ Add node</button>
-        </div>`;
-    
-  }
-  
-  function attachLink(){
-    prompt("type the link");
-  }
- </script>
-</body>
+      function addNode() {
+        const fullRoad = document.getElementById('fullRoad');
+        const nodeHTML = `
+          <div class="node-element">
+            <div class="input-group my-3">
+              <input type="text" class="form-control node-name" placeholder="Main node name">
+              <button class="btn btn-outline-danger remove-node" type="button"><i class="fa-solid fa-trash"></i></button>
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox">
+              </div>
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                Options
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item attach-link" href="#">Attach to link</a></li>
+                <li><a class="dropdown-item add-nested-node" href="#">Add nested node</a></li>
+              </ul>
+            </div>
+          </div>`;
+        fullRoad.insertAdjacentHTML('beforeend', nodeHTML);
+        addEventListeners();
+      }
+
+      function displayRoadmap() {
+        const displayDiv = document.getElementById('displayRoadmap');
+        displayDiv.innerHTML = ''; // Clear previous content
+
+        roadmapData.forEach((item, index) => {
+          const nodeHTML = `
+            <div class="card my-2">
+              <div class="card-body">
+                <h5 class="card-title">Node ${index + 1}</h5>
+                <p class="card-text">Name: ${item.name}</p>
+                <p class="card-text">Checked: ${item.checked ? 'Yes' : 'No'}</p>
+              </div>
+            </div>`;
+          displayDiv.insertAdjacentHTML('beforeend', nodeHTML);
+        });
+      }
+
+      function attachLink(event) {
+        const link = prompt("Enter the link:");
+        if (link) {
+          alert(Link "${link}" attached!);
+        }
+      }
+
+      function addEventListeners() {
+        document.querySelectorAll('.remove-node').forEach(btn =>
+          btn.addEventListener('click', function () {
+            this.closest('.node-element').remove();
+          })
+        );
+
+        document.querySelectorAll('.attach-link').forEach(link =>
+          link.addEventListener('click', attachLink)
+        );
+
+        document.querySelectorAll('.add-nested-node').forEach(btn =>
+          btn.addEventListener('click', function () {
+            const parent = this.closest('.node-element');
+            const nestedHTML = `
+              <div class="node-element nested">
+                <div class="input-group my-3">
+                  <input type="text" class="form-control node-name" placeholder="Nested node name">
+                  <button class="btn btn-outline-danger remove-node" type="button"><i class="fa-solid fa-trash"></i></button>
+                  <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox">
+                  </div>
+                </div>
+              </div>`;
+            parent.insertAdjacentHTML('beforeend', nestedHTML);
+            addEventListeners();
+          })
+        );
+      }
+
+      // Initial event listeners
+      addEventListeners();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
